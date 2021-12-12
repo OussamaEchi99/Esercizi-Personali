@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    
+    <div id="root">
+
+        <div class="container">
+            <div class="btn">
+                <button @click="startGame" >Start</button>
+                <button>Stop</button>
+            </div>
+        </div>
+
+        <div class="number">
+            <div 
+            @click="verify(ind)"
+            v-for="(element, ind) in result">{{ element }}
+            </div>
+        </div>
+
+        <div class="question">
+            <span>
+                {{firstNumber}} 
+                {{randomOperation}}
+                {{secondNumber}}
+            </span>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
